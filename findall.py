@@ -1,3 +1,8 @@
+'''
+re.search(pattern, string, flags)
+return list of string or list of group
+
+'''
 import re
 
 text = ""
