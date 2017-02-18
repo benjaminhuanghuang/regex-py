@@ -33,6 +33,7 @@ result = set(result)
 print list(result)
 
 reg_group_pattern = " (a[a-z][a-z]) |(A[a-z][a-z]) "  # will match "abc" or "Abc" without " "
+# if the pattern has more than one group, return list of tuples
 result = re.findall(reg_group_pattern, text)  # get [('', 'And'), ('all', ''), ('', 'All'), ('and', '')]
 final_res = set()
 for pair in result:
