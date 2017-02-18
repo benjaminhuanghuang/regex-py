@@ -9,3 +9,10 @@ print m.group()
 text = "world!hello"
 m = re.match(regex, text)
 print m.group()
+
+regex = "sh[abc]*"
+result = re.match(regex, "shalom stdents")
+if result:
+    print "match"
+else:
+    print "Not match"
