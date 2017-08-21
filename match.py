@@ -1,18 +1,10 @@
 import re
+import sys
 
-regex = "hello"
-text = "hello hello world!hello"
-m = re.match(regex, text)
-print m.group()
+test_string='`!@.#$%.^&*.()_'
+regex_pattern = r".{3}\..{3}\..{3}\..{3}" # ^(.{3}\.){3}.{3}$
 
-# Can not match. matching should start from beginning
-text = "world!hello"
-m = re.match(regex, text)
-print m.group()
 
-regex = "sh[abc]*"
-result = re.match(regex, "shalom stdents")
-if result:
-    print "match"
-else:
-    print "Not match"
+match = re.match(regex_pattern, test_string) is not None
+
+print(str(match).lower())
